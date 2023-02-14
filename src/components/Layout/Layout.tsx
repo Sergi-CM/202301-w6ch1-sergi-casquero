@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import CardList from "../CardList/CardList";
 import Header from "../Header/Header";
 
 const Layout = (): JSX.Element => {
@@ -6,7 +6,7 @@ const Layout = (): JSX.Element => {
     <>
       <Header />
       <main>
-        <Outlet />
+        <CardList />
       </main>
     </>
   );
