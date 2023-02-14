@@ -1,10 +1,11 @@
+import { taskStructure } from "../../store/features/todo/types";
 import TaskCardStyled from "./TaskCardStyled";
 
 interface TaskCardProps {
-  name: string;
+  task: taskStructure;
 }
 
-const TaskCard = ({ name }: TaskCardProps): JSX.Element => {
+const TaskCard = ({ task: { name } }: TaskCardProps): JSX.Element => {
   return (
     <TaskCardStyled className="task-card">
       <h3 className="task-card__title"> {name} </h3>

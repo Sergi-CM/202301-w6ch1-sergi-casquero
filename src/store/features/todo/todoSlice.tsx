@@ -1,7 +1,18 @@
-import React from "react";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { taskListStructure } from "./types";
 
-const todoSlice = () => {
-  return <div>todoSlice</div>;
-};
+const listInitialState: taskListStructure = [];
 
-export default todoSlice;
+export const todoSlice = createSlice({
+  name: "toDoList",
+  initialState: listInitialState,
+  reducers: {
+    loadTaskList: (
+      currentTaskList,
+      action: PayloadAction<taskListStructure>
+    ) => [...action.payload],
+  },
+});
+
+export const tasksReducer = todoSlice.reducer;
+export const { loadTaskList: loadTaskListActionCreator } = todoSlice.actions;

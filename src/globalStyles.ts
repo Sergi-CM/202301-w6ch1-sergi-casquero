@@ -6,6 +6,10 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+
+  li {
+    list-style: none;
+  }
 `;
 
 export default GlobalStyle;
