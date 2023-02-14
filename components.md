@@ -45,13 +45,12 @@
 - Shows a button component to delete that task
 - Shows a 'red-ish' background color when the task is not done
 - Shows a 'green-ish' background color when the task is done
-- Sends "✖️" to button component that deletes a task
 
 ## Button
 
 - Receives an icon
 - Receives an action
-- Shows the received icon within a button
+- Shows "✖️" within a button
 - Executes the received action on click
 
 ## CreateForm
